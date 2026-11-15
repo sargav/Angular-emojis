@@ -1,0 +1,139 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffafc 0%, #f3f6ff 100%);
+  font-family: Arial, sans-serif;
+}
+
+.quiz-shell {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.quiz-card {
+  width: min(760px, 100%);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(153, 168, 255, 0.2);
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(130, 120, 180, 0.12);
+  backdrop-filter: blur(6px);
+  padding: 2rem 1.5rem 2.2rem;
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8b7af7;
+  background: rgba(139, 122, 247, 0.08);
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  color: #2f2f3a;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.score-wrap {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #5e6478;
+  letter-spacing: 0.02em;
+}
+
+h2 span {
+  color: #6c63ff;
+  font-weight: 700;
+}
+
+.emojis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.emoji-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,236,255,0.9));
+  border: 1px solid rgba(136, 148, 255, 0.2);
+  box-shadow: 0 12px 25px rgba(123, 133, 186, 0.12);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.emoji-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.25), rgba(168, 197, 255, 0.2), rgba(255, 228, 132, 0.18));
+  opacity: 0.8;
+}
+
+.emoji-tile:nth-child(odd)::before {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.22), rgba(255, 228, 132, 0.2), rgba(168, 197, 255, 0.18));
+}
+
+.emoji-tile:nth-child(even)::before {
+  background: linear-gradient(135deg, rgba(168, 197, 255, 0.22), rgba(195, 253, 214, 0.2), rgba(255, 196, 239, 0.18));
+}
+
+.emoji {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  border-radius: 24px;
+  padding: 0;
+}
+
+.emoji:hover {
+  transform: translateY(-4px) scale(1.04);
+  filter: drop-shadow(0 8px 12px rgba(124, 111, 214, 0.18));
+}
+
+.emoji-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px rgba(123, 133, 186, 0.18);
+  border-color: rgba(139, 122, 247, 0.5);
+}
+
+.emoji:active {
+  transform: scale(0.98);
+}

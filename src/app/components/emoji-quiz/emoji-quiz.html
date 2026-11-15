@@ -1,0 +1,16 @@
+<div class="quiz-shell">
+  <div class="quiz-card">
+    <div class="quiz-header">
+      <span class="eyebrow">Emoji Match</span>
+      <h1>{{theCorrectAns?.name}}</h1>
+    </div>
+
+    <div class="emojis">
+      @for (emoji of emojis6; track emoji.codes) {
+        <div class="emoji-tile">
+          <button type="button" class="emoji" (click)="isChozen(emoji)">{{emoji.char}}</button>
+        </div>
+      }
+    </div>
+  </div>
+</div>

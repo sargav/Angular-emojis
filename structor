@@ -1,0 +1,34 @@
+src/
+└── app/
+    │
+    ├── emoji.ts
+    │
+    ├── services/
+    │   └── emoji.service.ts
+    │
+    ├── emoji-quiz/
+    │   ├── emoji-quiz.ts
+    │   ├── emoji-quiz.html
+    │   └── emoji-quiz.css
+    │
+    ├── emoji-option/
+    │   ├── emoji-option.ts
+    │   ├── emoji-option.html
+    │   └── emoji-option.css
+    │
+    ├── app.ts
+    ├── app.html
+    └── app.css
+
+
+    שלב	מה נבנה	מה נלמד
+1	Interface	הגדרת מבנה נתונים
+2	EmojiService	Service ו־DI
+3	חיבור HttpClient	הגדרת תקשורת HTTP
+4	טעינת נתונים	GET, Observable, subscribe
+5	EmojiQuizComponent	ניהול נתונים ומשחק
+6	EmojiOptionComponent	Input ו־Output
+7	הגרלת שאלות	מערכים, סינון ו־Random
+8	בדיקת תשובות	תנאים ו־Events
+9	סיום המשחק	מונה שאלות ותנאים
+10	CSS	עיצוב המשחק
